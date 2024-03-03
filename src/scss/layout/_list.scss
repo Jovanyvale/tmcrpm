@@ -1,0 +1,90 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.TMCRPMTB {
+    border-top: 8px solid v.$pink;
+    border-bottom: 4px solid black;
+    background-color: v.$pink;
+    background: linear-gradient(0deg, v.$pink 1%, rgb(0, 0, 0) 100%);
+
+    h1 {
+        padding-top: 3rem;
+        margin: 0 0 5rem 0;
+        text-align: center;
+        color: white;
+
+        span {
+            color: v.$pink;
+        }
+    }
+}
+
+.list_container {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-bottom: 5rem;
+
+    @include m.max-tablet {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+.letters {
+    display: flex;
+    /* Agregado para usar flexbox */
+    flex-direction: column;
+    /* Alineación vertical */
+    justify-content: center;
+    /* Centrado vertical */
+    max-width: 95%;
+    height: 300px;
+    width: 400px;
+    text-align: center;
+    align-self: center;
+    justify-self: right;
+    color: rgb(255, 255, 255);
+    list-style: none;
+    font-size: 2.6rem;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: 0.6s;
+
+    @include m.max-tablet {
+        justify-self: center;
+    }
+}
+
+.transi {
+    opacity: 1;
+    transition: 0.6s;
+}
+
+.list_image {
+    justify-self: left;
+    align-self: center;
+    margin-bottom: 1.5rem;
+    margin-left: 3rem;
+
+    @include m.max-tablet {
+        margin-left: 0;
+        justify-self: center;
+    }
+
+    img {
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+        width: 375px;
+        height: 375px;
+        object-fit: cover;
+        border-radius: 50%;
+
+        @include m.max-tablet {
+            width: 220px;
+            height: 220px;
+            max-width: 90%;
+        }
+    }
+}

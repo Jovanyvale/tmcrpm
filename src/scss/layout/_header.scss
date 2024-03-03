@@ -1,0 +1,26 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.80)), url('../../src/images/rosa_rauw.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 800px;
+
+    h1 {
+        span {
+            color: v.$pink;
+            text-shadow: 1px 0px 6px rgba(255, 255, 255, 0.3);
+        }
+
+        max-width: 90%;
+        margin: 0;
+        color: white;
+    }
+}

@@ -1,0 +1,43 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.song {
+    background-color: black;
+    display: grid;
+    place-items: center;
+    height: 80vh;
+    /* O ajusta la altura según tus necesidades */
+}
+
+.button {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 50rem;
+    height: 20rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../../src/images/16436916762398.jpg);
+    background-position-y: -6rem;
+    background-position-x: -8rem;
+    background-size: 120%;
+    border-radius: 1.3rem;
+    color: v.$pink;
+    font-size: 1.4rem;
+    transition: 0.4s ease;
+
+    @include m.max-tablet {
+        background-position-y: 0rem;
+        background-position-x: 0rem;
+        width: 20rem;
+        background-size: 100%;
+    }
+
+    &:hover {
+        transition: 0.4s ease;
+        box-shadow: 0 0rem 7rem 0rem white;
+        cursor: pointer;
+        transform: scale(1.05);
+        color: white;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../../src/images/16436916762398.jpg);
+    }
+}
